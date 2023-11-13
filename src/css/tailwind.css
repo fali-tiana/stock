@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* some base style */
+:root {
+	font-family: "General Sans", sans-serif;
+}
+
+h1 {
+	font-family: "General Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+.left-section {
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+		url("/stock/public/img/box.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.left-section h1 {
+	font-family: "boska", sans-serif;
+}
+
+/* adding components to the style */
+
+@layer components {
+	
+	/* for the login view */
+
+	.input-container {
+		@apply border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-base;
+	}
+
+	.input-label {
+		@apply block w-full mb-2 text-sm font-medium text-gray-900 dark:text-white;
+	}
+
+	.btn-primary {
+		@apply text-white bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900 hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 font-medium rounded-lg text-sm w-full px-5 py-4 text-center mr-2 mb-2 transition-all ease-in-out duration-300;
+	}
+
+	.checkbox-container {
+		@apply w-4 h-4 text-primary-500 bg-gray-100 border-gray-300 rounded cursor-pointer focus:ring-primary-400 dark:focus:ring-primary-500 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+	}
+
+	/* for the add product and details section */
+
+	.header {
+		@apply flex top-0 z-50 items-center justify-between w-full h-10 p-10 bg-white/50 backdrop-blur-md shadow-sm;
+	}
+	
+	.p-input {
+		@apply h-full font-bold text-xl max-xs:text-base pt-8 px-8 text-neutral-600;
+	}
+	
+	.label-input {
+		@apply relative block w-full p-4 rounded-md border-2 border-solid border-gray-200 cursor-text focus-within:border-primary-600 focus-within:ring-1 focus-within:ring-primary-600 max-xs:p-2;
+	}
+	
+	.span-input {
+		@apply pointer-events-none absolute start-2.5 top-0 -translate-y-[55%] bg-white p-0.5 text-sm text-gray-700 transition-all duration-500 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base max-xs:peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs;
+	}
+	
+	.input-field {
+		@apply border-none bg-transparent placeholder-transparent focus:bg-transparent focus:border-transparent focus:outline-none focus:ring-0;
+	}
+	
+	.text-input {
+		@apply w-full p-4 bg-transparent rounded-md resize-none text-inherit outline-none border-2 border-solid border-gray-200 cursor-text focus:border-primary-600 focus:ring-1 focus:ring-primary-600 max-xs:p-2 align-top sm:text-sm transition-all duration-500 placeholder:text-base max-xs:placeholder:text-sm max-lg:max-h-[150px];
+	}
+	
+	.product-information-card {
+		@apply w-[60%] min-w-[300px] h-[600px] xl:h-[600px] max-3xl:min-h-[700px] xl:min-h-[600px] p-0 mt-8 mr-auto shadow-xl rounded-xl overflow-hidden bg-white border-2 border-neutral-200 border-solid max-md:mx-6 max-md:w-full;
+	}
+	
+	.supplier-information-card {
+		@apply w-[35%] min-w-[300px] h-[600px] p-0 mt-8 ml-auto shadow-xl rounded-xl overflow-hidden bg-white border-2 border-neutral-200 border-solid max-md:mx-6 max-md:w-full;
+	}
+	
+	.media-card {
+		@apply w-full min-w-[300px] h-[500px] p-0 mt-8 shadow-xl rounded-xl overflow-hidden bg-white border-2 border-neutral-200 border-solid max-md:mx-6 max-md:w-full;
+	}
+	
+	.btn-base {
+		@apply flex select-none items-center gap-3 rounded-lg bg-[#B1B2FF] max-xs:py-2 px-6 max-xs:px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-neutral-400/20 transition-all hover:shadow-neutral-400/30 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+	}
+	
+	.btn-outlined {
+		@apply flex select-none items-center gap-3 mr-auto rounded-lg border-[#9899f4] border-2 border-solid text-[#9899f4] py-5 max-xs:py-2 px-6 max-xs:px-4 text-center align-middle font-sans text-lg font-bold uppercase active:opacity-[0.85] transition-all duration-300 hover:opacity-70 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+	}
+	
+	  /* for the dashboard section */
+	
+	.statistic-card {
+		@apply flex flex-col justify-around items-center p-8 w-[400px] h-[230px] bg-white rounded-xl shadow-lg;
+	}
+}
